@@ -4,9 +4,9 @@
     <EntitySetMapping Name="Images">
       <EntityTypeMapping TypeName="ImageUploadModel.Image">
         <MappingFragment StoreEntitySet="Image">
-          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
-          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
           <ScalarProperty Name="MakeDate" ColumnName="MakeDate" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageId" ColumnName="ImageId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

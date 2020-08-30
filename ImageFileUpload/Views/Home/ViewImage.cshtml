@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ImageFileUpload.Models.Image>
+
+@{
+    ViewBag.Title = "ViewImage";
+}
+
+<h2>ViewImage</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MakeDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.ImageName)*@
+
+            <img src="@Url.Content(item.ImageName)" width="50" height="50" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MakeDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ImageId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ImageId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ImageId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -20,19 +20,17 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ImageUploadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ImageUploadEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Images" EntityType="ImageUploadModel.Image" />
+        </EntityContainer>
         <EntityType Name="Image">
           <Key>
             <PropertyRef Name="ImageId" />
-            <PropertyRef Name="ImageName" />
-            <PropertyRef Name="MakeDate" />
           </Key>
-          <Property Name="ImageId" Type="Int32" Nullable="false" />
-          <Property Name="ImageName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="MakeDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityContainer Name="ImageUploadEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Images" EntityType="Self.Image" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -42,9 +40,9 @@
           <EntitySetMapping Name="Images">
             <EntityTypeMapping TypeName="ImageUploadModel.Image">
               <MappingFragment StoreEntitySet="Image">
-                <ScalarProperty Name="ImageId" ColumnName="ImageId" />
-                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
                 <ScalarProperty Name="MakeDate" ColumnName="MakeDate" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ImageId" ColumnName="ImageId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

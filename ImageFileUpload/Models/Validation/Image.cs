@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace ImageFileUpload.Models.Validation
+namespace ImageFileUpload.Models
 {
     [MetadataType(typeof(MetadataImage))]
     public partial class Image
