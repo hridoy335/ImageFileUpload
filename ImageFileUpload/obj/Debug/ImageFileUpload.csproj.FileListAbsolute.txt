@@ -77,3 +77,7 @@ D:\My Project\ImageFileUpload\ImageFileUpload\obj\Debug\ImageFileUpload.csproj.C
 D:\My Project\ImageFileUpload\ImageFileUpload\obj\Debug\ImageFileUpload.csproj.CopyComplete
 D:\My Project\ImageFileUpload\ImageFileUpload\obj\Debug\ImageFileUpload.dll
 D:\My Project\ImageFileUpload\ImageFileUpload\obj\Debug\ImageFileUpload.pdb
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.SqlServer.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.xml
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.SqlServer.xml
