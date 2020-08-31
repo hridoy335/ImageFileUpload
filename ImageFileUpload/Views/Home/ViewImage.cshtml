@@ -7,7 +7,7 @@
 <h2>ViewImage</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "ImageUpload")
 </p>
 <table class="table">
     <tr>
@@ -25,15 +25,14 @@
         <td>
             @*@Html.DisplayFor(modelItem => item.ImageName)*@
 
-            <img src="@Url.Content(item.ImageName)" width="50" height="50" />
+            <img src="@Url.Content(item.ImageName)" width="150" height="150" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MakeDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ImageId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ImageId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ImageId })
+            @Html.ActionLink("Edit", "ImageUpdate", new { id=item.ImageId }) 
+         
         </td>
     </tr>
 }

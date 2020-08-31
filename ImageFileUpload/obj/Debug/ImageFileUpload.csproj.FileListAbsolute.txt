@@ -81,3 +81,14 @@ D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.dll
 D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.SqlServer.dll
 D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.xml
 D:\My Project\ImageFileUpload\ImageFileUpload\bin\EntityFramework.SqlServer.xml
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\Grpc.Core.Api.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Buffers.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Memory.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Numerics.Vectors.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\Grpc.Core.Api.pdb
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\Grpc.Core.Api.xml
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Buffers.xml
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Memory.xml
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Numerics.Vectors.xml
+D:\My Project\ImageFileUpload\ImageFileUpload\bin\System.Runtime.CompilerServices.Unsafe.xml
