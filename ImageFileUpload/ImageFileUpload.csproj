@@ -146,6 +146,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmpInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TwoModelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +171,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelA.cs" />
+    <Compile Include="Models\ModelB.cs" />
+    <Compile Include="Models\ModelC.cs" />
     <Compile Include="Models\Validation\EmpInfoTBL.cs" />
     <Compile Include="Models\Validation\Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,6 +236,7 @@
     <Content Include="Views\Home\ViewImage.cshtml" />
     <Content Include="Views\Home\ImageUpdate.cshtml" />
     <Content Include="Views\EmpInfo\AddInfo.cshtml" />
+    <Content Include="Views\TwoModel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

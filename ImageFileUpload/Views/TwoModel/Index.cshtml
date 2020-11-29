@@ -1,0 +1,46 @@
+﻿@model ImageFileUpload.Models.ModelC
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Index</h2>
+
+<div class="col-md-9">
+    <h4>@Model.age</h4>
+    
+    @if (Model != null)
+    {
+        <div class="col-md-6">
+
+            <ul class="list-group">
+                @foreach (var name in Model.ListA)
+                {
+
+                    <li class="list-group-item">@name.Name </li>
+
+                }
+
+            </ul>
+            
+
+        </div>
+        <div class="col-md-6">
+
+            <ul class="list-group">
+                @foreach (var country in Model.ListB)
+                {
+
+                    <li class="list-group-item">@country.City </li>
+
+                }
+
+            </ul>
+           
+
+        </div>
+    }
+
+
+</div>
