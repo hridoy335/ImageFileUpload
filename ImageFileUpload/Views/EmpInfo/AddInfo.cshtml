@@ -1,0 +1,52 @@
+﻿@model ImageFileUpload.Models.EmpInfoTBL
+
+@{
+    ViewBag.Title = "AddInfo";
+}
+
+<h2>AddInfo</h2>
+
+<div class="col-md-9">
+    <form id="myForm">
+       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Name" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Age, new { @class = "form-control", @placeholder = "Age" })
+                @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control", @placeholder = "Address" })
+                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-12">
+                @*<a href="#" class="btn btn-primary " onclick="LoginUser()" id="LoginUser()">Login</a>*@
+                <input type="button" value="save" class="btn btn-default" id="LoginUser()" onclick="LoginUser()" />
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Empinfo.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}

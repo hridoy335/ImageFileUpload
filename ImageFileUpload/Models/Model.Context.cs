@@ -26,5 +26,6 @@ namespace ImageFileUpload.Models
         }
     
         public virtual DbSet<Image> Images { get; set; }
+        public virtual DbSet<EmpInfoTBL> EmpInfoTBLs { get; set; }
     }
 }

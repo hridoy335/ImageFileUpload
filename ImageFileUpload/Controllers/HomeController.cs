@@ -58,7 +58,7 @@ namespace ImageFileUpload.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View();
+            //return View();
         }
 
         public string EditImage(HttpPostedFileBase file) 

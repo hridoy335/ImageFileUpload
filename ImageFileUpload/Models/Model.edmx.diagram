@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="e09ada4d5a7840d48b3132d87781af1c" Name="Diagram1">
         <EntityTypeShape EntityType="ImageUploadModel.Image" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ImageUploadModel.EmpInfoTBL" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
