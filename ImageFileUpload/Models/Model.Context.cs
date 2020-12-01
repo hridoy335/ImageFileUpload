@@ -12,6 +12,8 @@ namespace ImageFileUpload.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ImageUploadEntities : DbContext
     {
@@ -27,5 +29,16 @@ namespace ImageFileUpload.Models
     
         public virtual DbSet<Image> Images { get; set; }
         public virtual DbSet<EmpInfoTBL> EmpInfoTBLs { get; set; }
+    
+        public virtual ObjectResult<Getinfo_Result> Getinfo(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Getinfo_Result>("Getinfo", idParameter);
+        }
+
+        public System.Data.Entity.DbSet<ImageFileUpload.Models.EmployeeInfo> EmployeeInfoes { get; set; }
     }
 }

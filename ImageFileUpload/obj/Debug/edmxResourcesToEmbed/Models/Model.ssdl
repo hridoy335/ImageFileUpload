@@ -17,6 +17,9 @@
     <Property Name="ImageName" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="MakeDate" Type="datetime" Nullable="false" />
   </EntityType>
+  <Function Name="Getinfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="ImageUploadModelStoreContainer">
     <EntitySet Name="EmpInfoTBL" EntityType="Self.EmpInfoTBL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />

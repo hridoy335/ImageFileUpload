@@ -153,6 +153,10 @@
     <Compile Include="Models\EmpInfoTBL.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmployeeInfo.cs" />
+    <Compile Include="Models\Getinfo_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Image.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -237,6 +241,7 @@
     <Content Include="Views\Home\ImageUpdate.cshtml" />
     <Content Include="Views\EmpInfo\AddInfo.cshtml" />
     <Content Include="Views\TwoModel\Index.cshtml" />
+    <Content Include="Views\EmpInfo\GetInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

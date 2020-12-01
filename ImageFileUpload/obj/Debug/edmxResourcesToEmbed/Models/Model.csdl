@@ -3,6 +3,9 @@
   <EntityContainer Name="ImageUploadEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Images" EntityType="ImageUploadModel.Image" />
     <EntitySet Name="EmpInfoTBLs" EntityType="ImageUploadModel.EmpInfoTBL" />
+    <FunctionImport Name="Getinfo" ReturnType="Collection(ImageUploadModel.Getinfo_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Image">
     <Key>
@@ -21,4 +24,10 @@
     <Property Name="Age" Type="Double" Nullable="false" />
     <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
+  <ComplexType Name="Getinfo_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="Age" Nullable="false" />
+    <Property Type="String" Name="Address" Nullable="false" MaxLength="50" />
+  </ComplexType>
 </Schema>

@@ -22,6 +22,9 @@
           <Property Name="ImageName" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="MakeDate" Type="datetime" Nullable="false" />
         </EntityType>
+        <Function Name="Getinfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="ImageUploadModelStoreContainer">
           <EntitySet Name="EmpInfoTBL" EntityType="Self.EmpInfoTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
@@ -33,6 +36,9 @@
         <EntityContainer Name="ImageUploadEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Images" EntityType="ImageUploadModel.Image" />
           <EntitySet Name="EmpInfoTBLs" EntityType="ImageUploadModel.EmpInfoTBL" />
+          <FunctionImport Name="Getinfo" ReturnType="Collection(ImageUploadModel.Getinfo_Result)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Image">
           <Key>
@@ -51,6 +57,12 @@
           <Property Name="Age" Type="Double" Nullable="false" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <ComplexType Name="Getinfo_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="Age" Nullable="false" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -76,6 +88,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Getinfo" FunctionName="ImageUploadModel.Store.Getinfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ImageUploadModel.Getinfo_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
